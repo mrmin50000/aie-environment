@@ -201,6 +201,10 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
         score -= 0.2
     if summary.n_cols > 100:
         score -= 0.1
+    if flags['has_constant_columns'] == True:
+        score -= 0.05
+    if flags['has_high_cardinality_categoricals'] == True:
+        score -= 0.05
 
     score = max(0.0, min(1.0, score))
     flags["quality_score"] = score
