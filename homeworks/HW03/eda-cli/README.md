@@ -57,3 +57,11 @@ uv run eda-cli report data/example.csv --out-dir reports
 ```bash
 uv run pytest -q
 ```
+
+## Добавленные команды
+
+```bash
+uv run eda-cli report data/example.csv --out-dir reports --title title --max-hist-columns 3
+```
+
+В результате title - будет заголовком в report.md, всего максимально возможных гистограмм будет 3
