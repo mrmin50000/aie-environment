@@ -67,6 +67,7 @@ def report(
     sep: str = typer.Option(",", help="Разделитель в CSV."),
     encoding: str = typer.Option("utf-8", help="Кодировка файла."),
     max_hist_columns: int = typer.Option(6, help="Максимум числовых колонок для гистограмм."),
+    title: str = typer.Option("EDA-отчёт", help="Заголовок маркдауна")
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -102,7 +103,7 @@ def report(
     # 4. Markdown-отчёт
     md_path = out_root / "report.md"
     with md_path.open("w", encoding="utf-8") as f:
-        f.write(f"# EDA-отчёт\n\n")
+        f.write(f"# {title}\n\n")
         f.write(f"Исходный файл: `{Path(path).name}`\n\n")
         f.write(f"Строк: **{summary.n_rows}**, столбцов: **{summary.n_cols}**\n\n")
 
@@ -138,6 +139,7 @@ def report(
 
         f.write("## Гистограммы числовых колонок\n\n")
         f.write("См. файлы `hist_*.png`.\n")
+        f.write(f"Максимальное количество: {max_hist_columns}")
 
     # 5. Картинки
     plot_histograms_per_column(df, out_root, max_columns=max_hist_columns)
