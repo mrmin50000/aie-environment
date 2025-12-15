@@ -43,15 +43,6 @@ def test_summarize_dataset_basic():
     assert "name" in summary_df.columns
     assert "missing_share" in summary_df.columns
 
-def test_constant_column():    
-    df = _sample_df_constant()
-    missing_df = missing_table(df)
-    summary = summarize_dataset(df)
-
-    flags = compute_quality_flags(summary, missing_df, 0.5)
-    assert flags["has_constant_columns"] == True 
-
-
 def test_missing_table_and_quality_flags():
     df = _sample_df()
     missing_df = missing_table(df)
@@ -75,3 +66,14 @@ def test_correlation_and_top_categories():
     city_table = top_cats["city"]
     assert "value" in city_table.columns
     assert len(city_table) <= 2
+
+
+def test_constant_column():    
+    df = _sample_df_constant()
+    missing_df = missing_table(df)
+    summary = summarize_dataset(df)
+
+    flags = compute_quality_flags(summary, missing_df, 0.5)
+    assert flags["has_constant_columns"] == True 
+
+
