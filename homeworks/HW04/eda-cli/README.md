@@ -66,4 +66,5 @@ uv run eda-cli report data/example.csv --out-dir reports --title title --min-mis
 
 В результате title - будет заголовком в report.md, min_missing_share задаст порог для отчета по пропускам
 
-
+## API
+Добавил эндпоинт quality-flags-from-csv, который принимает CSV-файл и возвращает полный набор флагов качества
