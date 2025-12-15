@@ -61,11 +61,9 @@ uv run pytest -q
 ## Добавленные команды
 
 ```bash
-uv run eda-cli report data/example.csv --out-dir reports --title title --max-hist-columns 3
+uv run eda-cli report data/example.csv --out-dir reports --title title --min-missing-share 0.5
 ```
 
-В результате title - будет заголовком в report.md, всего максимально возможных гистограмм будет 3
-<img width="654" height="199" alt="image" src="https://github.com/user-attachments/assets/a700a416-1886-46c2-8690-793bee4b5fb3" />
-<img width="674" height="688" alt="image" src="https://github.com/user-attachments/assets/b1af99be-77eb-45dc-b9b5-67a5310e3803" />
+В результате title - будет заголовком в report.md, min_missing_share задаст порог для отчета по пропускам
 
 
