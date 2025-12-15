@@ -67,7 +67,8 @@ def report(
     sep: str = typer.Option(",", help="Разделитель в CSV."),
     encoding: str = typer.Option("utf-8", help="Кодировка файла."),
     max_hist_columns: int = typer.Option(6, help="Максимум числовых колонок для гистограмм."),
-    title: str = typer.Option("EDA-отчёт", help="Заголовок маркдауна")
+    title: str = typer.Option("EDA-отчёт", help="Заголовок маркдауна"),
+    min_missing_share: float = typer.Option(0.5, help="порог доли пропусков")
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -90,7 +91,7 @@ def report(
     top_cats = top_categories(df)
 
     # 2. Качество в целом
-    quality_flags = compute_quality_flags(summary, missing_df)
+    quality_flags = compute_quality_flags(summary, missing_df, min_missing_share)
 
     # 3. Сохраняем табличные артефакты
     summary_df.to_csv(out_root / "summary.csv", index=False)

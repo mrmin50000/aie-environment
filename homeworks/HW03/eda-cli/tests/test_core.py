@@ -21,6 +21,14 @@ def _sample_df() -> pd.DataFrame:
         }
     )
 
+def _sample_df_constant() -> pd.DataFrame:
+    return pd.DataFrame(
+        {
+            "age": [1, 1, 1, 1],
+            "height": [1, 2, 1, 1],
+            "city": ["a", "a", "a", None],
+        }
+    )
 
 def test_summarize_dataset_basic():
     df = _sample_df()
@@ -35,6 +43,14 @@ def test_summarize_dataset_basic():
     assert "name" in summary_df.columns
     assert "missing_share" in summary_df.columns
 
+def test_constant_column():    
+    df = _sample_df_constant()
+    missing_df = missing_table(df)
+    summary = summarize_dataset(df)
+
+    flags = compute_quality_flags(summary, missing_df, 0.5)
+    assert flags["has_constant_columns"] == True 
+
 
 def test_missing_table_and_quality_flags():
     df = _sample_df()
@@ -44,7 +60,7 @@ def test_missing_table_and_quality_flags():
     assert missing_df.loc["age", "missing_count"] == 1
 
     summary = summarize_dataset(df)
-    flags = compute_quality_flags(summary, missing_df)
+    flags = compute_quality_flags(summary, missing_df, 0.5)
     assert 0.0 <= flags["quality_score"] <= 1.0
 
 

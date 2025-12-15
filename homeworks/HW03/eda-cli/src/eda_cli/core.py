@@ -6,7 +6,6 @@ from typing import Any, Dict, List, Optional, Sequence
 import pandas as pd
 from pandas.api import types as ptypes
 
-
 @dataclass
 class ColumnSummary:
     name: str
@@ -170,7 +169,7 @@ def top_categories(
     return result
 
 
-def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> Dict[str, Any]:
+def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame, min_missing_share: float) -> Dict[str, Any]:
     """
     Простейшие эвристики «качества» данных:
     - слишком много пропусков;
@@ -183,7 +182,7 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
 
     max_missing_share = float(missing_df["missing_share"].max()) if not missing_df.empty else 0.0
     flags["max_missing_share"] = max_missing_share
-    flags["too_many_missing"] = max_missing_share > 0.5
+    flags["too_many_missing"] = min_missing_share > 0.5
     
     flags['has_constant_columns'] = False
     flags['has_high_cardinality_categoricals'] = False
