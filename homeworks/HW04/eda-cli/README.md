@@ -1,4 +1,4 @@
-# S03 – eda_cli: мини-EDA для CSV
+# S04 – eda_cli: api
 
 Небольшое CLI-приложение для базового анализа CSV-файлов.
 Используется в рамках Семинара 03 курса «Инженерия ИИ».
@@ -68,3 +68,4 @@ uv run eda-cli report data/example.csv --out-dir reports --title title --min-mis
 
 ## API
 Добавил эндпоинт quality-flags-from-csv, который принимает CSV-файл и возвращает полный набор флагов качества
+<img width="467" height="242" alt="image" src="https://github.com/user-attachments/assets/b204b576-69ba-4243-b81b-8eb7fe021223" />
