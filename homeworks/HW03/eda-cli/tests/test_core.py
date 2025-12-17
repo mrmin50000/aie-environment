@@ -76,4 +76,10 @@ def test_constant_column():
     flags = compute_quality_flags(summary, missing_df, 0.5)
     assert flags["has_constant_columns"] == True 
 
+def test_coord_column():
+    df = _sample_df_constant()
+    missing_df = missing_table(df)
+    summary = summarize_dataset(df)
 
+    flags = compute_quality_flags(summary, missing_df, 0.5)
+    assert flags["has_high_cardinality_categoricals"] == False
