@@ -69,7 +69,7 @@ uv run eda-cli report data/example.csv --out-dir reports --title title --min-mis
 ## API
 Добавил эндпоинт quality-flags-from-csv, который принимает CSV-файл и возвращает полный набор флагов качества
 <img width="467" height="242" alt="image" src="https://github.com/user-attachments/assets/b204b576-69ba-4243-b81b-8eb7fe021223" />
-Запуск <br> 
+<br> Запуск <br> 
 ```bash 
 uv run uvicorn eda_cli.api:app --reload --port 8000
 ```
