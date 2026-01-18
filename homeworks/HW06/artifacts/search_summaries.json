@@ -1,0 +1,243 @@
+{
+  "LogisticRegression": {
+    "best_params": {
+      "C": 1.0
+    },
+    "best_score": 0.9621999999999999,
+    "cv_results": {
+      "params": [
+        {
+          "C": 0.01
+        },
+        {
+          "C": 0.1
+        },
+        {
+          "C": 1.0
+        },
+        {
+          "C": 10.0
+        }
+      ],
+      "mean_test_score": [
+        0.96205,
+        0.96215,
+        0.9621999999999999,
+        0.9621999999999999
+      ],
+      "std_test_score": [
+        0.0012389511693363998,
+        0.001124722187920185,
+        0.0011335784048754492,
+        0.0011335784048754492
+      ]
+    }
+  },
+  "DecisionTree": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 10
+    },
+    "best_score": 0.9660499999999999,
+    "cv_results": {
+      "params": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10
+        }
+      ],
+      "mean_test_score": [
+        0.9563499999999999,
+        0.9566000000000001,
+        0.9563,
+        0.96255,
+        0.9629,
+        0.9622999999999999,
+        0.9656,
+        0.9658,
+        0.9660499999999999
+      ],
+      "std_test_score": [
+        0.0019786358937409565,
+        0.0019144189719076856,
+        0.0020211382931407994,
+        0.0017846568297574617,
+        0.0018547236990991262,
+        0.0018934096228761556,
+        0.002194310825749178,
+        0.0022660538387249247,
+        0.001307669683062205
+      ]
+    }
+  },
+  "RandomForest": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 2
+    },
+    "best_score": 0.96505,
+    "cv_results": {
+      "params": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10
+        }
+      ],
+      "mean_test_score": [
+        0.9512,
+        0.951,
+        0.9509500000000001,
+        0.95555,
+        0.95505,
+        0.9551999999999999,
+        0.96505,
+        0.9643499999999999,
+        0.96265
+      ],
+      "std_test_score": [
+        0.00048476798574162986,
+        0.0002738612787525934,
+        0.0002915475947422748,
+        0.0010653637876331284,
+        0.0007314369419163956,
+        0.0005338539126015546,
+        0.0011113055385446689,
+        0.001347219358530762,
+        0.0012409673645990761
+      ]
+    }
+  },
+  "GradientBoosting": {
+    "best_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 10
+    },
+    "best_score": 0.9766999999999999,
+    "cv_results": {
+      "params": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 10
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 2
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 10,
+          "min_samples_leaf": 10
+        }
+      ],
+      "mean_test_score": [
+        0.9730000000000001,
+        0.9737500000000001,
+        0.9738999999999999,
+        0.9736,
+        0.9750499999999999,
+        0.9756,
+        0.97445,
+        0.97615,
+        0.9766999999999999
+      ],
+      "std_test_score": [
+        0.001890767040118898,
+        0.0019811612756159007,
+        0.002028546277510075,
+        0.0012308533625091276,
+        0.0017421251390184274,
+        0.00241143111035749,
+        0.0014000000000000106,
+        0.0013838352503097982,
+        0.0014949916387725995
+      ]
+    }
+  }
+}
