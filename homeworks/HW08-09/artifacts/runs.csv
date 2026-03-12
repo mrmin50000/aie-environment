@@ -1,0 +1,8 @@
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss
+E1,EMNIST,42,(256; 128) / ReLU / 0.0 / -,Adam,1e-3,0,0,10,0.8362,0.5096
+E2,EMNIST,42,(256; 128) / ReLU / 0.2 / -,Adam,1e-3,0,0,10,0.8391,0.4819
+E3,EMNIST,42,(256; 128) / ReLU / 0.0 / +,Adam,1e-3,0,0,10,0.8503,0.4496
+E4,EMNIST,42,(256; 128) / ReLU / 0.0 / +,Adam,1e-3,0,0,12,0.8504,0.4504
+01,EMNIST,42,(256; 128) / ReLU / 0.0 / +,Adam,1e-1,0,0,5,0.7605,0.7279
+02,EMNIST,42,(256; 128) / ReLU / 0.0 / +,Adam,1e-5,0,0,5,0.6626,1.6684
+03,EMNIST,42,(256; 128) / ReLU / 0.0 / +,SGD,1e-3,0.9,1e-4,10,0.8419,0.4815

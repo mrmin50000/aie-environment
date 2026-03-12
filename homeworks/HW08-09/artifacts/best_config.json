@@ -1,0 +1,29 @@
+{
+  "model": {
+    "architecture": "E4",
+    "num_classes": 47,
+    "pretrained": false
+  },
+  "training": {
+    "batch_size": 64,
+    "learning_rate": 1e-3,
+    "epochs": 12,
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss"
+  },
+  "experiment": {
+    "seed": 42,
+    "device": "cpu",
+  },
+  "dataset": {
+    "name": "EMNIST",
+    "path": "/data/EMNIST",
+    "train_size": 90240,
+    "val_size": 22560
+  },
+  "results": {
+    "best_val_accuracy": 0.8504,
+    "best_epoch": 12,
+    "best_val_loss": 0.4529
+  }
+}
