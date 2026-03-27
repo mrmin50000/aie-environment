@@ -1,0 +1,8 @@
+{
+  "experiment_id": "C4",
+  "dataset": "CIFAR100",
+  "model": "ResNet18",
+  "transforms": "Augmented",
+  "optimizer": "Adam",
+  "seed": 42
+}
