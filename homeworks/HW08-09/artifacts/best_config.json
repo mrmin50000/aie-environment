@@ -9,7 +9,12 @@
     "learning_rate": 1e-3,
     "epochs": 12,
     "optimizer": "Adam",
-    "loss_function": "CrossEntropyLoss"
+    "loss_function": "CrossEntropyLoss",
+    "activation": "ReLU",
+    "hidden_layers": [256, 128],
+    "dropout_rate": 0,
+    "batchnorm": true,
+    "weight_decay": 0
   },
   "experiment": {
     "seed": 42,
@@ -27,3 +32,4 @@
     "best_val_loss": 0.4529
   }
 }
+
