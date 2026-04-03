@@ -1,10 +1,7 @@
 experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
-C1,classification,CIFAR100,42,SimpleCNN,SGD,0.01,15,24.74,25.6,,,,Base
-C2,classification,CIFAR100,42,SimpleCNN,SGD,0.01,15,19.66,19.98,,,,Augmented
-C3,classification,CIFAR100,42,ResNet18 (Frozen),Adam,0.001,10,21.41,20.32,,,,Head Only
-C3,classification,CIFAR100,42,ResNet18 (Frozen),Adam,0.001,10,21.55,21.52,,,,Head Only
+C1,classification,CIFAR100,42,SimpleCNN,SGD,0.01,15,24.74,,,,,Base
+C2,classification,CIFAR100,42,SimpleCNN,SGD,0.01,15,19.66,,,,,Augmented
+C3,classification,CIFAR100,42,ResNet18 (Frozen),Adam,0.001,10,21.55,,,,,Head Only
 C4,classification,CIFAR100,42,ResNet18 (Fine-tune),Adam,0.0005,10,52.32,52.97,,,,Fine-tune
-V1,segmentation,OxfordIIITPet,42,DeepLabV3 ResNet50,-,-,0,0,0,,,0.0829,Argmax + Class Filter
-V2,segmentation,OxfordIIITPet,42,DeepLabV3 ResNet50,-,-,0,0,0,,,0.0829,Morphological Cleanup
 V1,segmentation,OxfordIIITPet,42,DeepLabV3 ResNet50,-,-,0,0,0,,,0.0829,Argmax + Class Filter
 V2,segmentation,OxfordIIITPet,42,DeepLabV3 ResNet50,-,-,0,0,0,,,0.0829,Morphological Cleanup
