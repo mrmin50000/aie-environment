@@ -1,3 +1,5 @@
 query,before_retrieved_sources,after_retrieved_sources,changed
 Оркестрация контейнеров в кластере,doc_01; doc_09; doc_14,doc_01; doc_09; doc_14,False
-Как проверить работоспособность контейнера автоматически?,doc_14; doc_14; doc_01,doc_14; doc_14; doc_14,True
+Как проверить работоспособность контейнера автоматически?,doc_14; doc_01; doc_11,doc_14; doc_14; doc_01,True
+Масштабирование реплик служб в Swarm,doc_13; doc_13; doc_09,doc_13; doc_13; doc_13,True
+Что происходит при провале healthcheck?,doc_14; doc_14; doc_09,doc_14; doc_14; doc_14,True
