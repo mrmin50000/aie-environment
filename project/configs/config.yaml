@@ -1,0 +1,43 @@
+data:
+  train_dir: data/train
+  val_dir: data/validation
+  image_size: 224
+  batch_size: 32
+  num_workers: 2
+
+model:
+  name: mobilenet_v2
+  pretrained: true
+  num_classes: 6
+
+training:
+  epochs: 3
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 2
+  freeze_backbone: false
+  fine_tune_epochs: 20
+  fine_tune_lr: 0.0001
+
+augmentation:
+  horizontal_flip_prob: 0.5
+  rotation_degrees: 10
+  color_jitter_brightness: 0.1
+  color_jitter_contrast: 0.1
+  color_jitter_saturation: 0.05
+  color_jitter_hue: 0.05
+  normalize_mean: [0.5, 0.5, 0.5]
+  normalize_std: [0.5, 0.5, 0.5]
+
+classes:
+  - crazing
+  - inclusion
+  - patches
+  - pitted_surface
+  - rolled-in_scale
+  - scratches
+
+service:
+  host: 0.0.0.0
+  port: 8000
+  model_path: artifacts/best_model.pth
